@@ -71,6 +71,14 @@ curl -X POST "http://localhost:8080/api/process" \
   {"id": "loc_02", "type": "hotel", "rating": 4.2, "reviews": 200}
 ]
 ```
+## 📂 Accessing JSON Files
+
+You can access the JSON files using the following links:
+
+- [Sample JSON 1](https://drive.google.com/drive/folders/1SCNJ5hDIEa4R20yd_8MpprnvkmjijmAi?usp=sharing)
+
+📌 **Note:** Ensure you have the correct permissions to access these files. If the links are private, you may need authentication.
+
 
 ## Frontend (Optional)
 A simple frontend page is placed in the `resources/static` directory to allow users to upload JSON files through a web interface.
