@@ -192,7 +192,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Display filename when files are selected
         document.getElementById('locationFile').addEventListener('change', function() {
             document.getElementById('locationFileName').textContent = this.files[0] ? this.files[0].name : '';
         });
@@ -201,7 +200,6 @@
             document.getElementById('metadataFileName').textContent = this.files[0] ? this.files[0].name : '';
         });
 
-        // Handle form submission
         document.getElementById('uploadForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -217,10 +215,8 @@
             formData.append('locationFile', locationFile);
             formData.append('metadataFile', metadataFile);
 
-            // Show loader
             document.getElementById('loader').style.display = 'block';
 
-            // Make API call
             fetch('/api/process', {
                 method: 'POST',
                 body: formData
@@ -244,7 +240,6 @@
         });
 
         function displayResults(data) {
-            // Display Merged Data
             const mergedDataTable = document.getElementById('mergedDataTable').getElementsByTagName('tbody')[0];
             mergedDataTable.innerHTML = '';
 
@@ -258,7 +253,6 @@
                 row.insertCell(5).textContent = item.reviews || 'N/A';
             });
 
-            // Display Valid Points by Type
             const validPointsContainer = document.getElementById('validPointsContainer');
             validPointsContainer.innerHTML = '';
 
@@ -277,7 +271,6 @@
                 validPointsContainer.appendChild(col);
             }
 
-            // Display Average Rating by Type
             const averageRatingContainer = document.getElementById('averageRatingContainer');
             averageRatingContainer.innerHTML = '';
 
@@ -296,7 +289,6 @@
                 averageRatingContainer.appendChild(col);
             }
 
-            // Display Location with Most Reviews
             const mostReviewsContainer = document.getElementById('mostReviewsContainer');
             const mostReviewed = data.locationWithMostReviews;
 
@@ -315,7 +307,6 @@
                 </div>
             `;
 
-            // Display Locations with Incomplete Data
             const incompleteDataContainer = document.getElementById('incompleteDataContainer');
             incompleteDataContainer.innerHTML = '';
 
