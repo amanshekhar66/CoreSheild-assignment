@@ -52,7 +52,6 @@
 <div class="container">
     <a href="/" class="btn btn-primary btn-back">← Back to Upload</a>
 
-    <!-- Merged Data -->
     <div class="card result-card">
         <div class="card-header">
             Merged Data
@@ -71,54 +70,45 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <!-- Data will be filled by JavaScript -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- Valid Points by Type -->
     <div class="card result-card">
         <div class="card-header">
             Valid Points by Type
         </div>
         <div class="card-body">
             <div class="row" id="validPointsContainer">
-                <!-- Data will be filled by JavaScript -->
             </div>
         </div>
     </div>
 
-    <!-- Average Rating by Type -->
     <div class="card result-card">
         <div class="card-header">
             Average Rating by Type
         </div>
         <div class="card-body">
             <div class="row" id="averageRatingContainer">
-                <!-- Data will be filled by JavaScript -->
             </div>
         </div>
     </div>
 
-    <!-- Location with Most Reviews -->
     <div class="card result-card">
         <div class="card-header">
             Location with Most Reviews
         </div>
         <div class="card-body" id="mostReviewsContainer">
-            <!-- Data will be filled by JavaScript -->
         </div>
     </div>
 
-    <!-- Locations with Incomplete Data -->
     <div class="card result-card">
         <div class="card-header">
             Locations with Incomplete Data
         </div>
         <div class="card-body" id="incompleteDataContainer">
-            <!-- Data will be filled by JavaScript -->
         </div>
     </div>
 </div>
@@ -136,7 +126,6 @@
         }
 
         function displayResults(data) {
-            // Display Merged Data
             const mergedDataTable = document.getElementById('mergedDataTable').getElementsByTagName('tbody')[0];
             mergedDataTable.innerHTML = '';
 
@@ -150,7 +139,6 @@
                 row.insertCell(5).textContent = item.reviews || 'N/A';
             });
 
-            // Display Valid Points by Type
             const validPointsContainer = document.getElementById('validPointsContainer');
             validPointsContainer.innerHTML = '';
 
@@ -169,7 +157,6 @@
                 validPointsContainer.appendChild(col);
             }
 
-            // Display Average Rating by Type
             const averageRatingContainer = document.getElementById('averageRatingContainer');
             averageRatingContainer.innerHTML = '';
 
@@ -188,7 +175,6 @@
                 averageRatingContainer.appendChild(col);
             }
 
-            // Display Location with Most Reviews
             const mostReviewsContainer = document.getElementById('mostReviewsContainer');
             const mostReviewed = data.locationWithMostReviews;
 
@@ -207,7 +193,6 @@
                 </div>
             `;
 
-            // Display Locations with Incomplete Data
             const incompleteDataContainer = document.getElementById('incompleteDataContainer');
             incompleteDataContainer.innerHTML = '';
 

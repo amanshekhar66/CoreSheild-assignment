@@ -109,12 +109,14 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <label for="locationFile" class="form-label">Location File (JSON)</label>
-                    <input type="file" class="form-control custom-file-input" id="locationFile" name="locationFile" accept=".json">
+                    <input type="file" class="form-control custom-file-input" id="locationFile" name="locationFile"
+                           accept=".json">
                     <div id="locationFileName" class="file-name"></div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <label for="metadataFile" class="form-label">Metadata File (JSON)</label>
-                    <input type="file" class="form-control custom-file-input" id="metadataFile" name="metadataFile" accept=".json">
+                    <input type="file" class="form-control custom-file-input" id="metadataFile" name="metadataFile"
+                           accept=".json">
                     <div id="metadataFileName" class="file-name"></div>
                 </div>
             </div>
@@ -126,7 +128,6 @@
     </div>
 
     <div id="results">
-        <!-- Merged Data -->
         <div class="card result-card">
             <div class="card-header">
                 Merged Data
@@ -145,54 +146,44 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <!-- Data will be filled by JavaScript -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
-        <!-- Valid Points by Type -->
         <div class="card result-card">
             <div class="card-header">
                 Valid Points by Type
             </div>
             <div class="card-body">
                 <div class="row" id="validPointsContainer">
-                    <!-- Data will be filled by JavaScript -->
                 </div>
             </div>
         </div>
 
-        <!-- Average Rating by Type -->
         <div class="card result-card">
             <div class="card-header">
                 Average Rating by Type
             </div>
             <div class="card-body">
                 <div class="row" id="averageRatingContainer">
-                    <!-- Data will be filled by JavaScript -->
                 </div>
             </div>
         </div>
 
-        <!-- Location with Most Reviews -->
         <div class="card result-card">
             <div class="card-header">
                 Location with Most Reviews
             </div>
             <div class="card-body" id="mostReviewsContainer">
-                <!-- Data will be filled by JavaScript -->
             </div>
         </div>
 
-        <!-- Locations with Incomplete Data -->
         <div class="card result-card">
             <div class="card-header">
                 Locations with Incomplete Data
             </div>
             <div class="card-body" id="incompleteDataContainer">
-                <!-- Data will be filled by JavaScript -->
             </div>
         </div>
     </div>
